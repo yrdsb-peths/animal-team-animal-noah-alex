@@ -18,22 +18,21 @@ public class Apple extends Actor
         image.scale(50, 50);
         setImage(image);
         int x = getX();
-        int y = getY(); //+ speed;
+        int y = getY() + speed;
         setLocation(x,y);
         
         //references the world
         MyWorld world = (MyWorld) getWorld();
         //adds the gameover once u die 
-        /*if(getY() >= world.getHeight())
+        if(getY() >= world.getHeight())
         {
             world.gameOver();
             world.removeObject(this);
         }
-            */
+
     }
-    /*public void setSpeed(int spd)
+    public void setSpeed(int spd)
     {
         speed = spd;
     }
-    */
 }
